@@ -24,7 +24,7 @@ A step by step series of examples that tell you how to get a development env run
 Clone the repository
 
 ```
-git clone git@github.com:nasarcacd/gamanza-react-code-assessment.git
+git clone git@github.com:nasarcacd/react-breaking-bad-assessment.git
 ```
 
 Go to the root directory and run the following command
@@ -40,3 +40,40 @@ At the root folder run the following command:
 ```
 yarn start
 ```
+
+## Deploy to Production
+
+Using heroku follow the next instructions:
+
+```
+heroku login
+heroku create gamanza-nayib-code-assessment
+git push heroku master
+```
+
+After that when you want to deploy new changes just run the following command:
+
+```
+git push heroku master
+```
+
+## Online DEMO
+
+https://gamanza-nayib-code-assessment.herokuapp.com/
+
+
+## Requirements not implemented
+
+1. Filters for characters
+2. Filters for episodes
+
+## Thinks to do with more time
+
+1. Research more about infinitive scroll 
+2. Adding more look and feel
+3. Try to separate API call and hooks
+
+## Bugs
+
+1. ...
+2. ...
