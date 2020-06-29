@@ -1,26 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { ThemeProvider } from '@material-ui/core/styles'
+import { Switch, Route, BrowserRouter as Router } from 'react-router-dom'
+import HomePage from './pages/homepage/HomePage'
+import EpisodesPage from './pages/episodes/EpisodesPage'
+import Header from './components/header/Header'
+import theme from './components/ui/theme'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <ThemeProvider theme={theme}>
+      <Router>
+      <Header />
+        <Switch>
+          <Route exact path="/">
+            <HomePage />
+          </Route>
+          <Route path="/home">
+            <HomePage />
+          </Route>
+          <Route path="/episodes">
+            <EpisodesPage />
+          </Route>
+        </Switch>
+      </Router>
+    </ThemeProvider>
+  )
 }
 
-export default App;
+export default App
