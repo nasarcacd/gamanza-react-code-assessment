@@ -47,7 +47,7 @@ Using heroku follow the next instructions:
 
 ```
 heroku login
-heroku create gamanza-nayib-code-assessment
+heroku create gamanza-nayib-code-assessment --buildpack mars/create-react-app
 git push heroku master
 ```
 
